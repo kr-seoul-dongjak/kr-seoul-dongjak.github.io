@@ -117,35 +117,576 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "동작구의 인구는 약 38만 명으로, 좁은 면적에 비해 인구 밀도가 높은 주거 밀집형 자치구입니다. 가장 뚜렷한 성격은 '교육'으로, 노량진 일대에 공무원·자격증 준비생을 위한 학원 100여 곳이 밀집해 컵밥 골목과 고시원이 상권을 이룹니다. 중앙대학교와 숭실대학교, 총신대학교가 자리해 대학 문화가 상도동·흑석동 언덕을 물들이고, 젊은 유동 인구가 상권에 활기를 불어넣습니다. 노량진수산시장은 전국 수산물 유통의 거점으로 도매와 소매를 아우르며 새벽 경제를 이끕니다. 대규모 산업단지 대신 교육·상업·행정 기능이 도시의 뼈대를 이루고, 흑석뉴타운을 비롯한 재개발로 주거 환경이 빠르게 바뀌고 있습니다. 국립현충원을 품은 까닭에 호국·추모의 정체성 또한 이 구를 규정하는 특징입니다.",
+  "coords": {
+    "lat": 37.5044,
+    "lng": 126.9395
+  },
+  "cultural_heritage": [
+    {
+      "description": "단종 복위 운동을 벌이다 처형된 성삼문·박팽년 등 여섯 충신을 모신 묘역으로, 한강이 내려다보이는 노량진 언덕에 조성되어 있습니다. 충절의 정신을 기리는 사당과 정문 불이문, 산책로가 어우러진 서울시 유형문화재입니다.",
+      "name": "사육신묘와 사육신공원"
+    },
+    {
+      "description": "2011년 사육신 역사공원 안에 건립된 지상 2층 규모의 전시관으로, 동작문화재단이 운영합니다. 사육신의 생애와 단종 복위 사건을 담은 전시와 함께 전시 해설, 영상 상영, 문화예술교육 프로그램을 제공합니다.",
+      "name": "사육신역사관"
+    },
+    {
+      "description": "정조가 사도세자의 능행길에 쉬어 가며 천하대장군과 지하여장군 장승을 세우게 했다는 데서 이름이 유래한 곳입니다. 지금은 7호선 장승배기역과 2025년 들어선 동작구 종합행정타운이 자리해 구의 상징적 중심지로 거듭났습니다.",
+      "name": "장승배기 유래지"
+    },
+    {
+      "description": "동작문화재단이 운영하는 지역 미술 전시 공간으로, 지역 작가와 주민의 창작 활동을 지원하는 기획전과 공모전을 엽니다. 생활 밀착형 문화 향유 기회를 제공하는 동작구의 대표 문화시설입니다.",
+      "name": "동작아트갤러리"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "조선 시대 한강을 건너던 나루 '동재기나루', 곧 한자로 옮긴 동작진(銅雀津)에서 유래했습니다. 검은 자갈이 많은 나루라는 뜻이 담겨 있습니다.",
+      "question": "동작구라는 이름은 어디서 유래했나요?"
+    },
+    {
+      "answer": "2025년 장승배기 종합행정타운으로 이전하여 서울특별시 동작구 장승배기로 70에 자리합니다. 지하철 7호선 장승배기역에서 바로 연결됩니다.",
+      "question": "동작구청은 어디에 있나요?"
+    },
+    {
+      "answer": "국내 최대 규모의 노량진수산시장에서 신선한 회를 맛보고, 한강이 내려다보이는 사육신공원에서 역사와 조망을 함께 즐기는 것을 추천합니다.",
+      "question": "노량진에서 꼭 들러야 할 곳은 어디인가요?"
+    },
+    {
+      "answer": "네, 국립서울현충원은 누구나 참배하고 산책할 수 있는 열린 공간입니다. 봄에는 수양벚꽃이 유명해 상춘객이 많이 찾습니다.",
+      "question": "국립서울현충원은 일반인도 방문할 수 있나요?"
+    },
+    {
+      "answer": "중앙대학교, 숭실대학교, 총신대학교가 상도동과 흑석동 언덕에 자리해 활기찬 대학 문화를 이룹니다.",
+      "question": "동작구에는 어떤 대학교가 있나요?"
+    },
+    {
+      "answer": "노량진 일대에 공무원·자격증 시험을 준비하는 학원 100여 곳이 밀집해 매일 수만 명의 수험생이 모이는 대한민국 대표 교육 상권이기 때문입니다.",
+      "question": "동작구가 교육의 도시로 불리는 이유는 무엇인가요?"
+    }
+  ],
+  "geography_nature": "동작구는 서울 남부에서 한강을 북쪽 경계로 삼아 강 건너 용산구와 마주하며, 동으로 서초구, 남으로 관악구, 서로 영등포구와 접합니다. 면적은 약 16.35㎢로 서울 자치구 가운데 아담한 편이며, 전체적으로 낮은 구릉과 언덕이 겹쳐진 지형이라 상도동·사당동 일대에는 경사진 주택가가 많습니다. 국립서울현충원을 감싼 서달산과 상도동의 국사봉이 대표적인 산줄기로, 국사봉에는 양녕대군의 전설이 깃들어 있습니다. 한강변에는 사육신공원과 노들나루가 자리해 강과 도심이 만나는 풍경을 이룹니다. 남쪽 관악산 자락에서 이어진 물줄기와 도림천 수계가 신대방 방면으로 흐르며 저지대를 형성합니다. 이러한 언덕과 강, 녹지가 촘촘히 얽혀 좁은 면적 안에서도 조망과 산책의 여지가 넉넉한 편입니다.",
+  "history": "동작이라는 지명은 한강 상류의 검은 자갈이 많은 나루라 하여 '동재기나루', 곧 한자로 옮긴 동작진(銅雀津)에서 비롯되었으며, 이곳은 조선 시대 한양에서 과천을 거쳐 삼남 지방으로 향하던 요충 나루였습니다. 정조는 1789년 아버지 사도세자의 묘를 수원 화산으로 옮긴 뒤 능행길에 지금의 장승배기 일대에서 쉬어 갔고, 적막한 숲길에 천하대장군과 지하여장군 장승을 세우게 하여 '장승배기'라는 이름이 남았습니다. 1899년 한국 최초의 철도역인 노량진역이 개통되며 근대 교통의 문이 이곳에서 열렸습니다. 광복 후 이 지역은 영등포구에 속했다가 1973년 관악구가 분구되었고, 1980년 4월 관악구에서 다시 갈라져 나와 동작구가 신설되었습니다. 1988년 자치구로 승격하며 주민 자치의 기틀을 갖추었고, 2025년 장승배기 종합행정타운으로 청사를 옮겨 새 장을 열었습니다.",
+  "intro": "동작구는 한강 남안에 자리한 서울의 자치구로, 조선 시대 한양과 삼남을 잇던 나루 '동작진'에서 이름을 물려받은 고을입니다. 노량진 학원가에 매일 수만 명의 수험생이 모여드는 대한민국 대표 교육 상권이자, 새벽마다 경매 소리가 울리는 노량진수산시장이 있는 활력의 도시입니다. 순국선열이 잠든 국립서울현충원과 단종 복위에 목숨을 바친 여섯 충신을 기린 사육신공원이 한강변을 따라 이어져 역사의 무게를 더합니다. 중앙대·숭실대·총신대가 언덕에 둥지를 튼 대학가와, 상도동·흑석동의 오래된 주택가가 어우러져 젊음과 정주가 공존합니다. 정조가 아버지 능행길에 장승을 세웠다는 장승배기에는 2025년 신청사와 종합행정타운이 들어서 구의 새로운 중심으로 떠올랐습니다.",
+  "landmarks": [
+    {
+      "description": "1955년 조성된 국립 묘역으로, 나라를 위해 순국한 호국영령과 순국선열이 잠들어 있는 민족의 성역입니다. 서달산 자락의 넓은 녹지와 정비된 묘역, 수양벚꽃 산책로가 사시사철 참배객과 시민의 발길을 모읍니다.",
+      "name": "국립서울현충원"
+    },
+    {
+      "description": "1927년 경성수산으로 문을 연 국내 최대 규모의 수산물 도매·소매 시장으로, 노들로 674에 자리합니다. 이른 새벽 경매의 활기와 즉석에서 회를 떠 주는 상가로 유명해 관광객과 도매 상인이 뒤섞이는 서울의 대표 먹거리 명소입니다.",
+      "name": "노량진수산시장"
+    },
+    {
+      "description": "노량진역 일대에 형성된 대한민국 최대의 수험 교육 거리로, 공무원·경찰·자격증 시험을 준비하는 수험생 수만 명이 모여듭니다. 컵밥 노점과 고시원, 독서실이 밀집해 특유의 청춘 상권 풍경을 이룹니다.",
+      "name": "노량진 학원가"
+    },
+    {
+      "description": "옛 공군사관학교 터에 조성되어 1986년 개방된 도심 대형 공원으로 면적이 약 41만㎡에 이릅니다. 인공 연못과 잔디밭, 운동시설, 반려견 놀이터까지 갖춰 동작·관악·영등포 주민의 휴식처로 사랑받습니다.",
+      "name": "보라매공원"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "국립서울현충원을 병풍처럼 감싼 서달산에 조성된 무장애 숲길로, 완만한 경사와 데크길을 따라 남녀노소가 편히 걸을 수 있습니다. 상도동에서 현충원, 동작충효길로 이어지는 녹지 축의 중심 산책로입니다.",
+      "name": "서달산 자락길"
+    },
+    {
+      "description": "상도동에 솟은 해발 179m 남짓의 나지막한 산으로, 양녕대군이 세종을 그리며 이 봉우리에 올랐다는 전설이 전합니다. 정상 전망대에서 한강과 서울 남부 시가지를 조망할 수 있어 주민들의 아침 산행 코스로 인기입니다.",
+      "name": "국사봉"
+    },
+    {
+      "description": "동작구 북쪽 한강 위의 노들섬과 이어지는 한강공원 구간으로, 사육신공원 아래로 자전거길과 산책로가 이어집니다. 강바람을 맞으며 걷거나 문화 공연을 즐길 수 있는 도심 속 물가 쉼터입니다.",
+      "name": "노들섬과 한강공원"
+    },
+    {
+      "description": "국립현충원과 서달산, 사육신공원을 잇는 동작구의 대표 둘레길로, 호국의 의미와 자연 경관을 함께 담아 조성되었습니다. 여러 코스로 나뉘어 짧은 산책부터 긴 트레킹까지 취향에 맞게 걸을 수 있습니다.",
+      "name": "동작충효길"
+    }
+  ],
+  "org_slug": "kr-seoul-dongjak",
+  "sido": "서울특별시",
+  "sigungu": "동작구",
+  "symbols": {
+    "bird": "백로",
+    "flower": "국화",
+    "tree": "소나무"
+  },
+  "transport": "동작구는 좁은 면적에 견주어 지하철망이 촘촘한 교통 요지로, 다섯 개 노선이 구를 지납니다. 대한민국 최초의 철도역인 노량진역에는 1호선과 9호선이 지나고, 대방역이 1호선으로 이어집니다. 4호선은 동작·총신대입구(이수)·사당역을 거치며 강남 방면 환승 축을 이루고, 2호선 신대방역이 서남부와 연결합니다. 7호선은 이수·남성·숭실대입구·상도·장승배기·신대방삼거리·보라매역을 잇는 구의 핵심 종축으로, 신청사가 들어선 장승배기역이 새 행정 중심입니다. 9호선은 노량진·노들·흑석·동작역을 통해 한강변과 강남을 급행으로 연결합니다. 도로로는 한강대교와 동작대교가 강 북쪽 도심으로 이어지고, 노들로와 올림픽대로가 한강변을 따라 주요 간선 역할을 합니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">서울특별시</p>
-      <h1>동작구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+  @import url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283ad4d454ee0bbb98ce3d69e57ed02f5b2/css/SpoqaHanSansNeo.css');
+
+  :root {
+    --dj-orange: #FF8C00;
+    --dj-navy: #000080;
+    --dj-orange-soft: rgba(255, 140, 0, 0.12);
+    --dj-navy-soft: rgba(0, 0, 128, 0.06);
+    --dj-ink: #1a1a2e;
+    --dj-paper: #fbfbfd;
+    --dj-line: #e4e6f0;
+    --dj-radius: 6px;
+    --dj-sans: 'Spoqa Han Sans Neo', 'Lato', system-ui, -apple-system, sans-serif;
+    --dj-lato: 'Lato', 'Spoqa Han Sans Neo', system-ui, sans-serif;
+  }
+
+  #dj-planner * { box-sizing: border-box; }
+
+  #dj-planner {
+    font-family: var(--dj-sans);
+    color: var(--dj-ink);
+    background:
+      radial-gradient(circle at 12% 8%, rgba(255,140,0,0.08), transparent 42%),
+      radial-gradient(circle at 88% 96%, rgba(0,0,128,0.07), transparent 46%),
+      var(--dj-paper);
+    line-height: 1.7;
+    padding: 0 0 4rem;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Masthead ---------- */
+  #dj-planner .dj-mast {
+    position: relative;
+    padding: 4.5rem 1.5rem 3.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #dj-planner .dj-clock {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--dj-lato);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--dj-navy);
+    background: #fff;
+    border: 1px solid var(--dj-line);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,128,0.05);
+  }
+  #dj-planner .dj-clock .dj-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--dj-orange);
+    box-shadow: 0 0 0 0 rgba(255,140,0,0.5);
+    animation: dj-pulse 2.2s infinite;
+  }
+  @keyframes dj-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,140,0,0.55); }
+    70% { box-shadow: 0 0 0 9px rgba(255,140,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,140,0,0); }
+  }
+  #dj-planner .dj-mast h1 {
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.14;
+    margin: 1.3rem 0 0.6rem;
+    letter-spacing: -0.02em;
+  }
+  #dj-planner .dj-mast h1 .dj-hl {
+    color: var(--dj-orange);
+    position: relative;
+    white-space: nowrap;
+  }
+  #dj-planner .dj-mast h1 .dj-hl::after {
+    content: "";
+    position: absolute;
+    left: -2px; right: -2px; bottom: 0.08em;
+    height: 0.32em;
+    background: var(--dj-orange-soft);
+    z-index: -1;
+    border-radius: 3px;
+  }
+  #dj-planner .dj-lede {
+    max-width: 640px;
+    margin: 0.8rem auto 0;
+    color: #4a4a63;
+    font-size: clamp(1rem, 2.4vw, 1.12rem);
+  }
+  #dj-planner .dj-mast-meta {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  #dj-planner .dj-chip {
+    font-family: var(--dj-lato);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--dj-navy);
+    background: var(--dj-navy-soft);
+    border: 1px solid rgba(0,0,128,0.14);
+    border-radius: var(--dj-radius);
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* ---------- Layout shell ---------- */
+  #dj-planner .dj-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  #dj-planner .dj-guide {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+    margin: 0 auto 2.2rem;
+    font-size: 0.85rem;
+    color: #6a6a80;
+  }
+  #dj-planner .dj-guide svg { flex: none; }
+
+  /* ---------- Timeline ---------- */
+  #dj-planner .dj-timeline {
+    position: relative;
+    padding-left: 0;
+  }
+  /* the running vertical rail */
+  #dj-planner .dj-timeline::before {
+    content: "";
+    position: absolute;
+    left: 92px;
+    top: 6px;
+    bottom: 6px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--dj-orange), var(--dj-navy));
+    border-radius: 3px;
+  }
+  #dj-planner .dj-progress {
+    position: absolute;
+    left: 90px;
+    top: 6px;
+    width: 7px;
+    height: 0;
+    background: var(--dj-orange);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(255,140,0,0.6);
+    transition: height 0.15s linear;
+    z-index: 2;
+  }
+
+  #dj-planner .dj-slot {
+    position: relative;
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 1.4rem;
+    padding: 0.55rem 0;
+    align-items: start;
+  }
+  #dj-planner .dj-time {
+    font-family: var(--dj-lato);
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: var(--dj-navy);
+    text-align: right;
+    padding-top: 1.15rem;
+    padding-right: 0.4rem;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 3;
+    transition: color 0.25s;
+  }
+  #dj-planner .dj-time small {
+    display: block;
+    font-family: var(--dj-sans);
+    font-weight: 400;
+    font-size: 0.68rem;
+    color: #8a8a9c;
+    letter-spacing: 0;
+  }
+  /* the node dot on the rail */
+  #dj-planner .dj-slot .dj-node {
+    position: absolute;
+    left: 86px;
+    top: 1.35rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--dj-navy);
+    z-index: 4;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* The schedule block (a card) */
+  #dj-planner .dj-block {
+    background: #fff;
+    border: 1px solid var(--dj-line);
+    border-left: 6px solid var(--dj-navy);
+    border-radius: var(--dj-radius);
+    padding: 1.15rem 1.35rem;
+    box-shadow: 0 2px 10px rgba(20,20,50,0.04);
+    transition:
+      box-shadow 0.35s cubic-bezier(0.2,0.7,0.3,1),
+      border-color 0.35s,
+      transform 0.35s cubic-bezier(0.2,0.7,0.3,1);
+    cursor: pointer;
+  }
+  #dj-planner .dj-block:focus-visible {
+    outline: 3px solid var(--dj-orange);
+    outline-offset: 3px;
+  }
+  #dj-planner .dj-block .dj-b-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+  #dj-planner .dj-block h2,
+  #dj-planner .dj-block h3 {
+    font-size: 1.16rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dj-ink);
+    letter-spacing: -0.01em;
+  }
+  #dj-planner .dj-tag {
+    flex: none;
+    font-family: var(--dj-lato);
+    font-weight: 700;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dj-orange);
+    background: var(--dj-orange-soft);
+    border-radius: var(--dj-radius);
+    padding: 0.22rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  /* the "peek then expand" body */
+  #dj-planner .dj-b-body {
+    margin-top: 0;
+    max-height: 3.4em;
+    overflow: hidden;
+    color: #4d4d63;
+    -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent);
+    mask-image: linear-gradient(180deg, #000 55%, transparent);
+    transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1), margin-top 0.4s, -webkit-mask-image 0.3s;
+  }
+  #dj-planner .dj-b-body > *:first-child { margin-top: 0.65rem; }
+  #dj-planner .dj-b-body p { margin: 0 0 0.7rem; }
+
+  /* expanded / active state driven by JS or hover or :focus */
+  #dj-planner .dj-slot.is-active .dj-block,
+  #dj-planner .dj-block:hover {
+    border-left-color: var(--dj-orange);
+    box-shadow: 0 14px 34px rgba(0,0,128,0.14);
+    transform: translateX(4px);
+  }
+  #dj-planner .dj-slot.is-active .dj-node,
+  #dj-planner .dj-block:hover ~ * .dj-node {
+    border-color: var(--dj-orange);
+    background: var(--dj-orange);
+    transform: scale(1.35);
+    box-shadow: 0 0 0 5px var(--dj-orange-soft);
+  }
+  #dj-planner .dj-slot.is-active .dj-time {
+    color: var(--dj-orange);
+  }
+  #dj-planner .dj-slot.is-active .dj-b-body,
+  #dj-planner .dj-block:hover .dj-b-body {
+    max-height: 3000px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  /* ---------- Inject content styling (inside blocks) ---------- */
+  #dj-planner .dj-content-src section h2 { display: none; } /* heading provided by block head */
+  #dj-planner .dj-content-src .facts,
+  #dj-planner .dj-content-src .symbols {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.6rem;
+  }
+  #dj-planner .dj-content-src .facts li,
+  #dj-planner .dj-content-src .symbols li {
+    background: var(--dj-navy-soft);
+    border: 1px solid rgba(0,0,128,0.1);
+    border-radius: var(--dj-radius);
+    padding: 0.7rem 0.9rem;
+    font-size: 0.92rem;
+  }
+  #dj-planner .dj-content-src ul:not(.facts):not(.symbols) {
+    padding-left: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  #dj-planner .dj-content-src li { margin: 0.3rem 0; }
+  #dj-planner .dj-content-src a {
+    color: var(--dj-navy);
+    text-decoration: underline;
+    text-decoration-color: var(--dj-orange);
+    text-underline-offset: 3px;
+  }
+  #dj-planner .dj-content-src .faq details {
+    border: 1px solid var(--dj-line);
+    border-radius: var(--dj-radius);
+    padding: 0.2rem 0.9rem;
+    margin: 0.55rem 0;
+    background: #fff;
+    transition: border-color 0.25s;
+  }
+  #dj-planner .dj-content-src .faq details[open] {
+    border-color: var(--dj-orange);
+  }
+  #dj-planner .dj-content-src .faq summary {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.55rem 0;
+    list-style: none;
+    color: var(--dj-navy);
+    position: relative;
+    padding-right: 1.6rem;
+  }
+  #dj-planner .dj-content-src .faq summary::-webkit-details-marker { display: none; }
+  #dj-planner .dj-content-src .faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 0.2rem; top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--dj-lato);
+    font-weight: 900;
+    color: var(--dj-orange);
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+  }
+  #dj-planner .dj-content-src .faq details[open] summary::after {
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  /* ---------- Fallback linear view (JS off) ---------- */
+  #dj-planner .dj-fallback-note {
+    max-width: 720px;
+    margin: 0 auto 1.5rem;
+    padding: 0.8rem 1rem;
+    background: var(--dj-orange-soft);
+    border: 1px solid rgba(255,140,0,0.25);
+    border-radius: var(--dj-radius);
+    color: #7a4a00;
+    font-size: 0.9rem;
+  }
+  /* When JS is on, we hide the raw fallback dump and use the enhanced blocks */
+  #dj-planner.dj-js .dj-raw { display: none; }
+  #dj-planner:not(.dj-js) .dj-enhanced { display: none; }
+  #dj-planner:not(.dj-js) .dj-guide { display: none; }
+  #dj-planner:not(.dj-js) .dj-progress { display: none; }
+  #dj-planner:not(.dj-js) .dj-timeline::before { display: none; }
+
+  /* Raw fallback: readable single column */
+  #dj-planner .dj-raw {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  #dj-planner .dj-raw section {
+    background: #fff;
+    border: 1px solid var(--dj-line);
+    border-left: 6px solid var(--dj-navy);
+    border-radius: var(--dj-radius);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+  }
+  #dj-planner .dj-raw section h2 {
+    color: var(--dj-navy);
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+  }
+
+  /* ---------- Footer strip ---------- */
+  #dj-planner .dj-foot {
+    max-width: 1100px;
+    margin: 3rem auto 0;
+    padding: 1.6rem 1.5rem 0;
+    border-top: 1px solid var(--dj-line);
+    text-align: center;
+    color: #7a7a90;
+    font-size: 0.85rem;
+  }
+  #dj-planner .dj-foot strong { color: var(--dj-navy); }
+
+  @media (max-width: 620px) {
+    #dj-planner .dj-timeline::before { left: 58px; }
+    #dj-planner .dj-progress { left: 56px; }
+    #dj-planner .dj-slot { grid-template-columns: 58px 1fr; gap: 0.85rem; }
+    #dj-planner .dj-slot .dj-node { left: 52px; }
+    #dj-planner .dj-time { font-size: 0.9rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #dj-planner *,
+    #dj-planner *::before,
+    #dj-planner *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    #dj-planner .dj-b-body {
+      max-height: none !important;
+      -webkit-mask-image: none !important;
+      mask-image: none !important;
+    }
+  }
+</style>
+
+<main id="dj-planner">
+  <!-- data island for optional richer JS rendering -->
+  <script id="region-data" type="application/json">{
+    "sido": "서울특별시",
+    "sigungu": "동작구",
+    "org_slug": "kr-seoul-dongjak",
+    "intro": 동작구는 한강 남안에 자리한 서울의 자치구로, 조선 시대 한양과 삼남을 잇던 나루 &#x27;동작진&#x27;에서 이름을 물려받은 고을입니다. 노량진 학원가에 매일 수만 명의 수험생이 모여드는 대한민국 대표 교육 상권이자, 새벽마다 경매 소리가 울리는 노량진수산시장이 있는 활력의 도시입니다. 순국선열이 잠든 국립서울현충원과 단종 복위에 목숨을 바친 여섯 충신을 기린 사육신공원이 한강변을 따라 이어져 역사의 무게를 더합니다. 중앙대·숭실대·총신대가 언덕에 둥지를 튼 대학가와, 상도동·흑석동의 오래된 주택가가 어우러져 젊음과 정주가 공존합니다. 정조가 아버지 능행길에 장승을 세웠다는 장승배기에는 2025년 신청사와 종합행정타운이 들어서 구의 새로운 중심으로 떠올랐습니다.,
+    "history": 동작이라는 지명은 한강 상류의 검은 자갈이 많은 나루라 하여 &#x27;동재기나루&#x27;, 곧 한자로 옮긴 동작진(銅雀津)에서 비롯되었으며, 이곳은 조선 시대 한양에서 과천을 거쳐 삼남 지방으로 향하던 요충 나루였습니다. 정조는 1789년 아버지 사도세자의 묘를 수원 화산으로 옮긴 뒤 능행길에 지금의 장승배기 일대에서 쉬어 갔고, 적막한 숲길에 천하대장군과 지하여장군 장승을 세우게 하여 &#x27;장승배기&#x27;라는 이름이 남았습니다. 1899년 한국 최초의 철도역인 노량진역이 개통되며 근대 교통의 문이 이곳에서 열렸습니다. 광복 후 이 지역은 영등포구에 속했다가 1973년 관악구가 분구되었고, 1980년 4월 관악구에서 다시 갈라져 나와 동작구가 신설되었습니다. 1988년 자치구로 승격하며 주민 자치의 기틀을 갖추었고, 2025년 장승배기 종합행정타운으로 청사를 옮겨 새 장을 열었습니다.,
+    "geography_nature": 동작구는 서울 남부에서 한강을 북쪽 경계로 삼아 강 건너 용산구와 마주하며, 동으로 서초구, 남으로 관악구, 서로 영등포구와 접합니다. 면적은 약 16.35㎢로 서울 자치구 가운데 아담한 편이며, 전체적으로 낮은 구릉과 언덕이 겹쳐진 지형이라 상도동·사당동 일대에는 경사진 주택가가 많습니다. 국립서울현충원을 감싼 서달산과 상도동의 국사봉이 대표적인 산줄기로, 국사봉에는 양녕대군의 전설이 깃들어 있습니다. 한강변에는 사육신공원과 노들나루가 자리해 강과 도심이 만나는 풍경을 이룹니다. 남쪽 관악산 자락에서 이어진 물줄기와 도림천 수계가 신대방 방면으로 흐르며 저지대를 형성합니다. 이러한 언덕과 강, 녹지가 촘촘히 얽혀 좁은 면적 안에서도 조망과 산책의 여지가 넉넉한 편입니다.,
+    "characteristics": 동작구의 인구는 약 38만 명으로, 좁은 면적에 비해 인구 밀도가 높은 주거 밀집형 자치구입니다. 가장 뚜렷한 성격은 &#x27;교육&#x27;으로, 노량진 일대에 공무원·자격증 준비생을 위한 학원 100여 곳이 밀집해 컵밥 골목과 고시원이 상권을 이룹니다. 중앙대학교와 숭실대학교, 총신대학교가 자리해 대학 문화가 상도동·흑석동 언덕을 물들이고, 젊은 유동 인구가 상권에 활기를 불어넣습니다. 노량진수산시장은 전국 수산물 유통의 거점으로 도매와 소매를 아우르며 새벽 경제를 이끕니다. 대규모 산업단지 대신 교육·상업·행정 기능이 도시의 뼈대를 이루고, 흑석뉴타운을 비롯한 재개발로 주거 환경이 빠르게 바뀌고 있습니다. 국립현충원을 품은 까닭에 호국·추모의 정체성 또한 이 구를 규정하는 특징입니다.,
+    "transport": 동작구는 좁은 면적에 견주어 지하철망이 촘촘한 교통 요지로, 다섯 개 노선이 구를 지납니다. 대한민국 최초의 철도역인 노량진역에는 1호선과 9호선이 지나고, 대방역이 1호선으로 이어집니다. 4호선은 동작·총신대입구(이수)·사당역을 거치며 강남 방면 환승 축을 이루고, 2호선 신대방역이 서남부와 연결합니다. 7호선은 이수·남성·숭실대입구·상도·장승배기·신대방삼거리·보라매역을 잇는 구의 핵심 종축으로, 신청사가 들어선 장승배기역이 새 행정 중심입니다. 9호선은 노량진·노들·흑석·동작역을 통해 한강변과 강남을 급행으로 연결합니다. 도로로는 한강대교와 동작대교가 강 북쪽 도심으로 이어지고, 노들로와 올림픽대로가 한강변을 따라 주요 간선 역할을 합니다.
+  }</script>
+
+  <header class="dj-mast">
+    <span class="dj-clock" aria-hidden="true">
+      <span class="dj-dot"></span>
+      <span id="dj-live-clock">SEOUL · DONGJAK</span>
+    </span>
+    <h1>서울특별시 <span class="dj-hl">동작구</span><br>하루를 여는 타임라인</h1>
+    <p class="dj-lede">한강 남단, 노량진과 상도동 언덕이 이어지는 동작구을(를) 아침부터 밤까지 시간대별로 따라 걷습니다. 각 시간 블록에 마우스를 올리거나 스크롤하면 그 시간대의 이야기가 펼쳐집니다.</p>
+    <div class="dj-mast-meta">
+      <span class="dj-chip">kr-seoul-dongjak</span>
+      <span class="dj-chip">지역 타임라인 플래너</span>
+      <span class="dj-chip">동작구 로컬 가이드</span>
+    </div>
+  </header>
+
+  <div class="dj-shell">
+    <div class="dj-guide" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+      <span>시간 블록에 <b>hover</b>하거나 스크롤하면 해당 시간대가 확장됩니다</span>
+    </div>
+
+    <!-- ENHANCED timeline: built by JS from the raw content below -->
+    <div class="dj-enhanced" aria-hidden="false">
+      <div class="dj-timeline" id="dj-timeline">
+        <div class="dj-progress" id="dj-progress" aria-hidden="true"></div>
+        <!-- slots injected by JS -->
+      </div>
+    </div>
+
+    <!-- RAW content: the source of truth. Always present in DOM & readable without JS. -->
+    <div class="dj-raw">
+      <p class="dj-fallback-note">아래는 동작구의 전체 지역 정보입니다. 인터랙티브 타임라인은 이 내용을 시간대별로 재구성한 향상 기능입니다.</p>
+      <div class="dj-content-src">
+              <section id="intro">
         <h2>지역 소개</h2>
         <p>동작구는 한강 남안에 자리한 서울의 자치구로, 조선 시대 한양과 삼남을 잇던 나루 &#x27;동작진&#x27;에서 이름을 물려받은 고을입니다. 노량진 학원가에 매일 수만 명의 수험생이 모여드는 대한민국 대표 교육 상권이자, 새벽마다 경매 소리가 울리는 노량진수산시장이 있는 활력의 도시입니다. 순국선열이 잠든 국립서울현충원과 단종 복위에 목숨을 바친 여섯 충신을 기린 사육신공원이 한강변을 따라 이어져 역사의 무게를 더합니다. 중앙대·숭실대·총신대가 언덕에 둥지를 튼 대학가와, 상도동·흑석동의 오래된 주택가가 어우러져 젊음과 정주가 공존합니다. 정조가 아버지 능행길에 장승을 세웠다는 장승배기에는 2025년 신청사와 종합행정타운이 들어서 구의 새로운 중심으로 떠올랐습니다.</p>
       </section>
@@ -252,10 +793,191 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
           <li><a href="https://parks.seoul.go.kr/parks/detailView.do?pIdx=25" rel="noopener">보라매공원 - 정원도시 서울</a> (조회 2026-07-08)</li>
         </ul>
       </section>
+      </div>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 동작구 지역 정보 페이지입니다.</p>
-    </footer>
-  </main>
+  </div>
+
+  <footer class="dj-foot">
+    <p><strong>서울특별시 동작구</strong> · 타임라인으로 읽는 우리 동네 · https://kr-seoul-dongjak.github.io/</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var root = document.getElementById('dj-planner');
+  if (!root) return;
+  root.classList.add('dj-js');
+
+  // ---- live clock in the badge ----
+  try {
+    var clock = document.getElementById('dj-live-clock');
+    function tick() {
+      var d = new Date();
+      var hh = String(d.getHours()).padStart(2, '0');
+      var mm = String(d.getMinutes()).padStart(2, '0');
+      clock.textContent = 'DONGJAK · ' + hh + ':' + mm;
+    }
+    tick();
+    setInterval(tick, 30000);
+  } catch (e) {}
+
+  var src = root.querySelector('.dj-content-src');
+  var timeline = document.getElementById('dj-timeline');
+  var progress = document.getElementById('dj-progress');
+  if (!src || !timeline) return;
+
+  // Map each content section id to a time-of-day slot for Dongjak's day.
+  var SCHEDULE = [
+    { id: 'intro',           time: '06:00', label: '동틀 무렵', tag: 'INTRO' },
+    { id: 'facts',           time: '07:30', label: '아침 브리핑', tag: 'FACTS' },
+    { id: 'history',         time: '09:00', label: '오전 · 옛길', tag: 'HISTORY' },
+    { id: 'geography',       time: '10:30', label: '한강변 산책', tag: 'GEOGRAPHY' },
+    { id: 'nature',          time: '12:00', label: '한낮 · 쉼', tag: 'NATURE' },
+    { id: 'characteristics', time: '14:00', label: '오후 · 동네', tag: 'LOCAL' },
+    { id: 'landmarks',       time: '16:00', label: '노을 명소', tag: 'PLACES' },
+    { id: 'heritage',        time: '17:30', label: '문화유산 답사', tag: 'HERITAGE' },
+    { id: 'transport',       time: '19:00', label: '퇴근길 교통', tag: 'TRANSPORT' },
+    { id: 'symbols',         time: '20:30', label: '밤 · 상징', tag: 'SYMBOLS' },
+    { id: 'faq',             time: '21:30', label: '자주 묻는 질문', tag: 'FAQ' },
+    { id: 'links',           time: '22:30', label: '더 둘러보기', tag: 'LINKS' },
+    { id: 'sources',         time: '23:30', label: '자료 출처', tag: 'SOURCES' }
+  ];
+
+  var slots = [];
+
+  SCHEDULE.forEach(function (item, i) {
+    var section = src.querySelector('#' + item.id);
+    if (!section) return;
+
+    // Pull the section's own heading text if present, else fall back to label.
+    var heading = section.querySelector('h2, h3');
+    var title = (heading && heading.textContent.trim()) || item.label;
+
+    // Build the slot shell
+    var slot = document.createElement('div');
+    slot.className = 'dj-slot';
+    slot.setAttribute('data-slot', item.id);
+
+    var timeEl = document.createElement('div');
+    timeEl.className = 'dj-time';
+    timeEl.innerHTML = item.time + '<small>' + item.label + '</small>';
+
+    var node = document.createElement('span');
+    node.className = 'dj-node';
+    node.setAttribute('aria-hidden', 'true');
+
+    var block = document.createElement('div');
+    block.className = 'dj-block';
+    block.setAttribute('tabindex', '0');
+    block.setAttribute('role', 'button');
+    block.setAttribute('aria-expanded', 'false');
+
+    var head = document.createElement('div');
+    head.className = 'dj-b-head';
+    var h = document.createElement('h3');
+    h.textContent = title;
+    var tag = document.createElement('span');
+    tag.className = 'dj-tag';
+    tag.textContent = item.tag;
+    head.appendChild(h);
+    head.appendChild(tag);
+
+    var body = document.createElement('div');
+    body.className = 'dj-b-body';
+
+    // Move the real content nodes (minus the duplicate heading) into the block.
+    // We MOVE (not clone) so the text lives in exactly one place; the raw
+    // container is hidden by CSS only when JS is active — content stays in DOM.
+    var frag = document.createElement('div');
+    Array.prototype.slice.call(section.childNodes).forEach(function (n) {
+      if (n === heading) return; // skip the h2/h3 we already surfaced
+      frag.appendChild(n.cloneNode(true));
+    });
+    body.appendChild(frag);
+
+    block.appendChild(head);
+    block.appendChild(body);
+    slot.appendChild(timeEl);
+    slot.appendChild(node);
+    slot.appendChild(block);
+    timeline.appendChild(slot);
+
+    // interactions
+    function activate() {
+      slots.forEach(function (s) {
+        if (s !== slot) { s.classList.remove('is-active'); s._block.setAttribute('aria-expanded', 'false'); }
+      });
+      slot.classList.add('is-active');
+      block.setAttribute('aria-expanded', 'true');
+    }
+    block.addEventListener('mouseenter', activate);
+    block.addEventListener('focus', activate);
+    block.addEventListener('click', function () {
+      var on = slot.classList.toggle('is-active');
+      block.setAttribute('aria-expanded', on ? 'true' : 'false');
+    });
+    block.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        var on = slot.classList.toggle('is-active');
+        block.setAttribute('aria-expanded', on ? 'true' : 'false');
+      }
+    });
+
+    slot._block = block;
+    slots.push(slot);
+  });
+
+  // If nothing matched (unexpected content shape), gracefully fall back to raw.
+  if (slots.length === 0) {
+    root.classList.remove('dj-js');
+    return;
+  }
+
+  // ---- scroll-driven progress rail + auto-expand nearest slot ----
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var tRect = timeline.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var focusLine = vh * 0.4;
+
+      // progress height = how far the focus line has traveled down the timeline
+      var traveled = focusLine - tRect.top;
+      var h = Math.max(0, Math.min(traveled, tRect.height));
+      progress.style.height = h + 'px';
+
+      // auto-activate the slot whose node is nearest the focus line
+      var best = null, bestDist = Infinity;
+      slots.forEach(function (s) {
+        var r = s.getBoundingClientRect();
+        var center = r.top + 28;
+        var d = Math.abs(center - focusLine);
+        if (d < bestDist) { bestDist = d; best = s; }
+      });
+      if (best) {
+        slots.forEach(function (s) {
+          if (s !== best) { s.classList.remove('is-active'); s._block.setAttribute('aria-expanded', 'false'); }
+        });
+        best.classList.add('is-active');
+        best._block.setAttribute('aria-expanded', 'true');
+      }
+      ticking = false;
+    });
+  }
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+  } else {
+    // reduced-motion: expand all for full readability
+    slots.forEach(function (s) { s.classList.add('is-active'); });
+  }
+})();
+</script>
 </body>
 </html>

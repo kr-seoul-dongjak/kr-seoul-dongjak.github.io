@@ -267,6 +267,42 @@ body { padding-top: var(--cg-strip-h); }
 .cg-colophon-note { margin: 4px 0 0; color: #9a9aa8; }
 @media (max-width: 640px) { .cg-strip-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .cg-skip { transition: none; } }
+
+/* ---- Mobile reading view (touch / small screens) ------------------------------------- */
+/* The immersive per-구 template is desktop-only. On touch devices and narrow screens the
+   .cg-read view is shown instead — it uses only safe, high-contrast CSS so text can never
+   go invisible on iOS Safari (no background-clip:text, backdrop-filter, 100vh, :hover-gated
+   reveals, or mix-blend-mode). Fully namespaced + generator-controlled. */
+.cg-read { display: none; }
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  /* Neutralise immersive templates that lock scrolling / lock the viewport on <body>. */
+  html, body { overflow-x: hidden !important; overflow-y: auto !important; height: auto !important;
+    min-height: 0 !important; position: static !important; touch-action: auto !important; background: #ffffff !important; }
+  .cg-immersive { display: none !important; }
+  .cg-read { display: block; }
+}
+.cg-read { max-width: 720px; margin: 0 auto; padding: 20px 18px 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #17171f; background: #ffffff; line-height: 1.75; -webkit-text-size-adjust: 100%; }
+.cg-read * { max-width: 100%; box-sizing: border-box; }
+.cg-read-head { padding: 8px 0 16px; border-bottom: 3px solid var(--cg-ra, #2d5bff); margin-bottom: 20px; }
+.cg-read-eyebrow { margin: 0 0 4px; color: var(--cg-rd, #333); font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+.cg-read-head h1 { margin: 0; font-size: clamp(30px, 8vw, 40px); line-height: 1.15; color: #14141c; font-weight: 800; }
+.cg-read h2 { font-size: 20px; margin: 30px 0 10px; padding-left: 11px; color: #14141c; font-weight: 700;
+  border-left: 5px solid var(--cg-ra, #2d5bff); }
+.cg-read p { margin: 0 0 12px; font-size: 17px; color: #23232d; }
+.cg-read section { margin: 0; }
+.cg-read ul { margin: 8px 0 0; padding-left: 20px; }
+.cg-read li { margin: 8px 0; font-size: 16px; color: #23232d; }
+.cg-read li strong { color: #111119; font-weight: 700; }
+.cg-read .facts, .cg-read .symbols { list-style: none; padding: 14px 16px; margin: 8px 0 0;
+  background: #f5f6fa; border: 1px solid #e6e8f0; border-radius: 12px; }
+.cg-read .faq details { border: 1px solid #e6e8f0; border-radius: 10px; padding: 10px 14px; margin: 8px 0; background: #fbfbfd; }
+.cg-read .faq summary { cursor: pointer; font-weight: 700; font-size: 16px; color: #14141c; }
+.cg-read .faq details p { margin: 8px 0 2px; color: #44454f; }
+.cg-read a { color: #1a46d8; word-break: break-word; }
+.cg-read .sources { font-size: 14px; color: #55565f; }
+.cg-read .sources a { color: #3a5bd0; }
 </style>
 </head>
 <body>
@@ -275,6 +311,7 @@ body { padding-top: var(--cg-strip-h); }
     <span class="cg-ad">AD</span><span class="cg-strip-label">후원 파트너</span><span class="cg-strip-list"><a class="cg-strip-item" href="https://ikoffices.com" rel="sponsored noopener" target="_blank">일광오피스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://mobidicsaju.com" rel="sponsored noopener" target="_blank">모비딕 사주</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://www.foodskorea.com/" rel="sponsored noopener" target="_blank">전국팔도 식품도감</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://myflowmakers.com" rel="sponsored noopener" target="_blank">마이플로우메이커스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonlijispace.com" rel="sponsored noopener" target="_blank">연리지 인테리어</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonliji.io" rel="sponsored noopener" target="_blank">주식회사 연리지</a><span class="cg-strip-dot" aria-hidden="true">·</span><span class="cg-strip-item cg-strip-text">세무·법률 자문</span></span>
   </aside>
   <div id="cg-main" tabindex="-1"></div>
+  <div class="cg-immersive">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
   @import url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283ad4d454ee0bbb98ce3d69e57ed02f5b2/css/SpoqaHanSansNeo.css');
@@ -1031,6 +1068,129 @@ body { padding-top: var(--cg-strip-h); }
   }
 })();
 </script>
+  </div>
+  <main class="cg-read" id="cg-read" role="main" lang="ko" style="--cg-ra:#ab3e2b;--cg-ra2:#d0a539;--cg-rd:#572319">
+    <header class="cg-read-head">
+      <p class="cg-read-eyebrow">서울특별시</p>
+      <h1>동작구</h1>
+    </header>
+    <div class="cg-read-body">
+      <section id="r-intro">
+        <h2>지역 소개</h2>
+        <p>동작구는 한강 남안에 자리한 서울의 자치구로, 조선 시대 한양과 삼남을 잇던 나루 &#x27;동작진&#x27;에서 이름을 물려받은 고을입니다. 노량진 학원가에 매일 수만 명의 수험생이 모여드는 대한민국 대표 교육 상권이자, 새벽마다 경매 소리가 울리는 노량진수산시장이 있는 활력의 도시입니다. 순국선열이 잠든 국립서울현충원과 단종 복위에 목숨을 바친 여섯 충신을 기린 사육신공원이 한강변을 따라 이어져 역사의 무게를 더합니다. 중앙대·숭실대·총신대가 언덕에 둥지를 튼 대학가와, 상도동·흑석동의 오래된 주택가가 어우러져 젊음과 정주가 공존합니다. 정조가 아버지 능행길에 장승을 세웠다는 장승배기에는 2025년 신청사와 종합행정타운이 들어서 구의 새로운 중심으로 떠올랐습니다.</p>
+      </section>
+      <section id="r-facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 381,704명 (2022)</li>
+          <li>면적: 16.35 km²</li>
+          <li>신설: 1980년 4월 1일</li>
+        </ul>
+      </section>
+      <section id="r-history">
+        <h2>역사</h2>
+        <p>동작이라는 지명은 한강 상류의 검은 자갈이 많은 나루라 하여 &#x27;동재기나루&#x27;, 곧 한자로 옮긴 동작진(銅雀津)에서 비롯되었으며, 이곳은 조선 시대 한양에서 과천을 거쳐 삼남 지방으로 향하던 요충 나루였습니다. 정조는 1789년 아버지 사도세자의 묘를 수원 화산으로 옮긴 뒤 능행길에 지금의 장승배기 일대에서 쉬어 갔고, 적막한 숲길에 천하대장군과 지하여장군 장승을 세우게 하여 &#x27;장승배기&#x27;라는 이름이 남았습니다. 1899년 한국 최초의 철도역인 노량진역이 개통되며 근대 교통의 문이 이곳에서 열렸습니다. 광복 후 이 지역은 영등포구에 속했다가 1973년 관악구가 분구되었고, 1980년 4월 관악구에서 다시 갈라져 나와 동작구가 신설되었습니다. 1988년 자치구로 승격하며 주민 자치의 기틀을 갖추었고, 2025년 장승배기 종합행정타운으로 청사를 옮겨 새 장을 열었습니다.</p>
+      </section>
+      <section id="r-geography">
+        <h2>지리·자연환경</h2>
+        <p>동작구는 서울 남부에서 한강을 북쪽 경계로 삼아 강 건너 용산구와 마주하며, 동으로 서초구, 남으로 관악구, 서로 영등포구와 접합니다. 면적은 약 16.35㎢로 서울 자치구 가운데 아담한 편이며, 전체적으로 낮은 구릉과 언덕이 겹쳐진 지형이라 상도동·사당동 일대에는 경사진 주택가가 많습니다. 국립서울현충원을 감싼 서달산과 상도동의 국사봉이 대표적인 산줄기로, 국사봉에는 양녕대군의 전설이 깃들어 있습니다. 한강변에는 사육신공원과 노들나루가 자리해 강과 도심이 만나는 풍경을 이룹니다. 남쪽 관악산 자락에서 이어진 물줄기와 도림천 수계가 신대방 방면으로 흐르며 저지대를 형성합니다. 이러한 언덕과 강, 녹지가 촘촘히 얽혀 좁은 면적 안에서도 조망과 산책의 여지가 넉넉한 편입니다.</p>
+      </section>
+      <section id="r-characteristics">
+        <h2>지역 특징</h2>
+        <p>동작구의 인구는 약 38만 명으로, 좁은 면적에 비해 인구 밀도가 높은 주거 밀집형 자치구입니다. 가장 뚜렷한 성격은 &#x27;교육&#x27;으로, 노량진 일대에 공무원·자격증 준비생을 위한 학원 100여 곳이 밀집해 컵밥 골목과 고시원이 상권을 이룹니다. 중앙대학교와 숭실대학교, 총신대학교가 자리해 대학 문화가 상도동·흑석동 언덕을 물들이고, 젊은 유동 인구가 상권에 활기를 불어넣습니다. 노량진수산시장은 전국 수산물 유통의 거점으로 도매와 소매를 아우르며 새벽 경제를 이끕니다. 대규모 산업단지 대신 교육·상업·행정 기능이 도시의 뼈대를 이루고, 흑석뉴타운을 비롯한 재개발로 주거 환경이 빠르게 바뀌고 있습니다. 국립현충원을 품은 까닭에 호국·추모의 정체성 또한 이 구를 규정하는 특징입니다.</p>
+      </section>
+      <section id="r-landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>국립서울현충원</strong> — 1955년 조성된 국립 묘역으로, 나라를 위해 순국한 호국영령과 순국선열이 잠들어 있는 민족의 성역입니다. 서달산 자락의 넓은 녹지와 정비된 묘역, 수양벚꽃 산책로가 사시사철 참배객과 시민의 발길을 모읍니다.</li>
+          <li><strong>노량진수산시장</strong> — 1927년 경성수산으로 문을 연 국내 최대 규모의 수산물 도매·소매 시장으로, 노들로 674에 자리합니다. 이른 새벽 경매의 활기와 즉석에서 회를 떠 주는 상가로 유명해 관광객과 도매 상인이 뒤섞이는 서울의 대표 먹거리 명소입니다.</li>
+          <li><strong>노량진 학원가</strong> — 노량진역 일대에 형성된 대한민국 최대의 수험 교육 거리로, 공무원·경찰·자격증 시험을 준비하는 수험생 수만 명이 모여듭니다. 컵밥 노점과 고시원, 독서실이 밀집해 특유의 청춘 상권 풍경을 이룹니다.</li>
+          <li><strong>보라매공원</strong> — 옛 공군사관학교 터에 조성되어 1986년 개방된 도심 대형 공원으로 면적이 약 41만㎡에 이릅니다. 인공 연못과 잔디밭, 운동시설, 반려견 놀이터까지 갖춰 동작·관악·영등포 주민의 휴식처로 사랑받습니다.</li>
+        </ul>
+      </section>
+      <section id="r-heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>사육신묘와 사육신공원</strong> — 단종 복위 운동을 벌이다 처형된 성삼문·박팽년 등 여섯 충신을 모신 묘역으로, 한강이 내려다보이는 노량진 언덕에 조성되어 있습니다. 충절의 정신을 기리는 사당과 정문 불이문, 산책로가 어우러진 서울시 유형문화재입니다.</li>
+          <li><strong>사육신역사관</strong> — 2011년 사육신 역사공원 안에 건립된 지상 2층 규모의 전시관으로, 동작문화재단이 운영합니다. 사육신의 생애와 단종 복위 사건을 담은 전시와 함께 전시 해설, 영상 상영, 문화예술교육 프로그램을 제공합니다.</li>
+          <li><strong>장승배기 유래지</strong> — 정조가 사도세자의 능행길에 쉬어 가며 천하대장군과 지하여장군 장승을 세우게 했다는 데서 이름이 유래한 곳입니다. 지금은 7호선 장승배기역과 2025년 들어선 동작구 종합행정타운이 자리해 구의 상징적 중심지로 거듭났습니다.</li>
+          <li><strong>동작아트갤러리</strong> — 동작문화재단이 운영하는 지역 미술 전시 공간으로, 지역 작가와 주민의 창작 활동을 지원하는 기획전과 공모전을 엽니다. 생활 밀착형 문화 향유 기회를 제공하는 동작구의 대표 문화시설입니다.</li>
+        </ul>
+      </section>
+      <section id="r-nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>서달산 자락길</strong> — 국립서울현충원을 병풍처럼 감싼 서달산에 조성된 무장애 숲길로, 완만한 경사와 데크길을 따라 남녀노소가 편히 걸을 수 있습니다. 상도동에서 현충원, 동작충효길로 이어지는 녹지 축의 중심 산책로입니다.</li>
+          <li><strong>국사봉</strong> — 상도동에 솟은 해발 179m 남짓의 나지막한 산으로, 양녕대군이 세종을 그리며 이 봉우리에 올랐다는 전설이 전합니다. 정상 전망대에서 한강과 서울 남부 시가지를 조망할 수 있어 주민들의 아침 산행 코스로 인기입니다.</li>
+          <li><strong>노들섬과 한강공원</strong> — 동작구 북쪽 한강 위의 노들섬과 이어지는 한강공원 구간으로, 사육신공원 아래로 자전거길과 산책로가 이어집니다. 강바람을 맞으며 걷거나 문화 공연을 즐길 수 있는 도심 속 물가 쉼터입니다.</li>
+          <li><strong>동작충효길</strong> — 국립현충원과 서달산, 사육신공원을 잇는 동작구의 대표 둘레길로, 호국의 의미와 자연 경관을 함께 담아 조성되었습니다. 여러 코스로 나뉘어 짧은 산책부터 긴 트레킹까지 취향에 맞게 걸을 수 있습니다.</li>
+        </ul>
+      </section>
+      <section id="r-transport">
+        <h2>교통</h2>
+        <p>동작구는 좁은 면적에 견주어 지하철망이 촘촘한 교통 요지로, 다섯 개 노선이 구를 지납니다. 대한민국 최초의 철도역인 노량진역에는 1호선과 9호선이 지나고, 대방역이 1호선으로 이어집니다. 4호선은 동작·총신대입구(이수)·사당역을 거치며 강남 방면 환승 축을 이루고, 2호선 신대방역이 서남부와 연결합니다. 7호선은 이수·남성·숭실대입구·상도·장승배기·신대방삼거리·보라매역을 잇는 구의 핵심 종축으로, 신청사가 들어선 장승배기역이 새 행정 중심입니다. 9호선은 노량진·노들·흑석·동작역을 통해 한강변과 강남을 급행으로 연결합니다. 도로로는 한강대교와 동작대교가 강 북쪽 도심으로 이어지고, 노들로와 올림픽대로가 한강변을 따라 주요 간선 역할을 합니다.</p>
+      </section>
+      <section id="r-symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 국화</li>
+          <li>구목(나무): 소나무</li>
+          <li>구조(새): 백로</li>
+        </ul>
+      </section>
+      <section id="r-faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>동작구라는 이름은 어디서 유래했나요?</summary>
+            <p>조선 시대 한강을 건너던 나루 &#x27;동재기나루&#x27;, 곧 한자로 옮긴 동작진(銅雀津)에서 유래했습니다. 검은 자갈이 많은 나루라는 뜻이 담겨 있습니다.</p>
+          </details>
+          <details>
+            <summary>동작구청은 어디에 있나요?</summary>
+            <p>2025년 장승배기 종합행정타운으로 이전하여 서울특별시 동작구 장승배기로 70에 자리합니다. 지하철 7호선 장승배기역에서 바로 연결됩니다.</p>
+          </details>
+          <details>
+            <summary>노량진에서 꼭 들러야 할 곳은 어디인가요?</summary>
+            <p>국내 최대 규모의 노량진수산시장에서 신선한 회를 맛보고, 한강이 내려다보이는 사육신공원에서 역사와 조망을 함께 즐기는 것을 추천합니다.</p>
+          </details>
+          <details>
+            <summary>국립서울현충원은 일반인도 방문할 수 있나요?</summary>
+            <p>네, 국립서울현충원은 누구나 참배하고 산책할 수 있는 열린 공간입니다. 봄에는 수양벚꽃이 유명해 상춘객이 많이 찾습니다.</p>
+          </details>
+          <details>
+            <summary>동작구에는 어떤 대학교가 있나요?</summary>
+            <p>중앙대학교, 숭실대학교, 총신대학교가 상도동과 흑석동 언덕에 자리해 활기찬 대학 문화를 이룹니다.</p>
+          </details>
+          <details>
+            <summary>동작구가 교육의 도시로 불리는 이유는 무엇인가요?</summary>
+            <p>노량진 일대에 공무원·자격증 시험을 준비하는 학원 100여 곳이 밀집해 매일 수만 명의 수험생이 모이는 대한민국 대표 교육 상권이기 때문입니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="r-links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.dongjak.go.kr" rel="noopener">동작구청 공식 홈페이지</a></li>
+        </ul>
+      </section>
+      <section id="r-github">
+        <h2>GitHub</h2>
+        <ul>
+          <li><a href="https://github.com/kr-seoul-dongjak" rel="noopener">GitHub 조직: kr-seoul-dongjak</a></li>
+          <li><a href="https://github.com/kr-seoul-dongjak/kr-seoul-dongjak.github.io" rel="noopener">이 사이트 저장소</a></li>
+        </ul>
+      </section>
+      <section id="r-sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/동작구" rel="noopener">동작구 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://ko.wikipedia.org/wiki/장승배기_종합행정타운" rel="noopener">장승배기 종합행정타운 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.idfac.or.kr/sub_new/menu02_02_01.php" rel="noopener">동작문화재단 사육신역사관</a> (조회 2026-07-08)</li>
+          <li><a href="https://parks.seoul.go.kr/parks/detailView.do?pIdx=25" rel="noopener">보라매공원 - 정원도시 서울</a> (조회 2026-07-08)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
   <aside class="cg-sponsors" aria-label="후원 파트너 상세">
     <p class="cg-spon-head"><span class="cg-ad">AD</span> 후원 파트너 <small>이 링크는 광고이며 편집상의 추천이 아닙니다 (rel=&quot;sponsored&quot;).</small></p>
     <ul class="cg-spon-grid">
